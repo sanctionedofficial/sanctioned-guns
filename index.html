@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sanctioned Armory Index</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Sanctioned">
+      <div class="logoText">Sanctioned</div>
+    </div>
+
+    <nav class="nav">
+      <button class="navItem active" data-cat="Tier 1">Tier 1</button>
+      <button class="navItem" data-cat="Tier 2">Tier 2</button>
+      <button class="navItem" data-cat="Tier 3">Tier 3</button>
+      <button class="navItem" data-cat="Drugs">Drugs</button>
+    </nav>
+
+    <div class="sidebarFooter">
+      <a href="https://sanctionedrp.com/" target="_blank">Forum</a>
+      <a href="https://discord.gg/hvwnGDbawP" target="_blank">Discord</a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="title">Sanctioned Armory Index</div>
+      <div class="headerRight">
+        <input id="search" placeholder="Search items…" />
+        <button id="randomBtn">Random</button>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="content">
+      <div class="card">
+        <div class="cardTitle">Items</div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- Modal -->
+<dialog id="modal" class="modal">
+  <div class="modalInner">
+    <div class="modalHeader">
+      <div id="mName"></div>
+      <button id="closeModal">✕</button>
+    </div>
+    <img id="mImg">
+    <div class="modalStats">
+      <div>Damage <span id="vDmg"></span></div>
+      <div>Recoil <span id="vRec"></span></div>
+      <div>Accuracy <span id="vAcc"></span></div>
+      <div>Range <span id="vRng"></span></div>
+      <div>Fire Rate <span id="vFr"></span></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
